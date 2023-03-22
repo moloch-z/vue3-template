@@ -1,0 +1,12 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+yarn.lock
+yarn-error.log
+package-lock.json
+*.yaml
+visualizer
+types/auto-imports.d.ts
+types/components.d.ts

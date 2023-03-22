@@ -1,0 +1,31 @@
+{
+  "extensions.ignoreRecommendations": false,
+  "editor.tabSize": 2,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.alwaysShowStatus": true,
+  "prettier.semi": false, //结尾u分号
+  "prettier.trailingComma": "none",
+  "prettier.singleQuote": true,
+  "prettier.endOfLine": "auto",
+  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"],
+  "eslint.validate": ["vue", "typescript", "javascript", "javascriptreact"],
+  "eslint.workingDirectories": [
+    ".eslintrc",
+    {
+      "mode": "location"
+    }
+  ],
+  "i18n-ally.localesPaths": ["src/locales", "src/locales/lang"],
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

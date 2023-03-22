@@ -1,0 +1,16 @@
+{
+  "printWidth": 140,
+  "singleQuote": true,
+  "semi": false,
+  "trailingComma": "none",
+  "bracketSameLine": true,
+  "arrowParens": "avoid",
+  "endOfLine": "auto",
+  "htmlWhitespaceSensitivity": "ignore",
+  "overrides": [
+    {
+      "files": [".prettierrc", ".eslintrc", ".stylelintrc", ".lintstagedrc"],
+      "options": { "parser": "json" }
+    }
+  ]
+}

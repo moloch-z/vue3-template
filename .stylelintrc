@@ -1,0 +1,35 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
+
+  "overrides": [
+    {
+      "extends": ["stylelint-config-recommended-scss", "stylelint-config-recess-order"],
+      "files": ["**/*.scss"]
+    },
+    {
+      "extends": ["stylelint-config-recommended-less", "stylelint-config-recess-order"],
+      "customSyntax": "postcss-less",
+      "files": ["**/*.less"]
+    },
+    {
+      "extends": [
+        "stylelint-config-prettier",
+        "stylelint-config-recommended-less",
+        "stylelint-config-recess-order",
+        "stylelint-config-html/vue"
+      ],
+      "customSyntax": "postcss-html",
+      "files": ["**/*.vue"]
+    }
+  ],
+  "rules": {
+    "no-empty-first-line": true,
+    "no-descending-specificity": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["deep", "v-deep"]
+      }
+    ]
+  }
+}
