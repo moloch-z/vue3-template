@@ -2,7 +2,8 @@
   <a-layout>
     <a-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible>
       <div class="logo">
-        <img src="@/assets/img/logo.jpg" alt="logo" />
+        <span v-if="!collapsed">Middle Office</span>
+        <img v-else src="@/assets/img/logo.jpg" alt="logo" />
       </div>
       <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline" @click="handleClick">
         <a-menu-item key="Home">
@@ -48,6 +49,8 @@ function handleClick(e) {
   width: 100%;
   max-width: 200px;
   padding: 10px;
+  font-size: 20px;
+  color: #fff;
 
   img {
     width: 100%;
