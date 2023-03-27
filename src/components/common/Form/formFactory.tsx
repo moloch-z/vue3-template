@@ -88,7 +88,6 @@ export function formFactory(options: FormFactoryOptions): Component {
       })
       return {
         onReset,
-        ...props,
         formRef
       }
     },
