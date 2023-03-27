@@ -1,5 +1,5 @@
 import type { UserInfo } from '@/api'
-import type { SessionDB } from '../base'
+
 import { session, removeSession } from '../base'
 
 // ------------------userinfo--------------------------------
@@ -33,6 +33,6 @@ export function userInfoSession(value?: string): UserInfoSessionDB {
  *
  * @returns {SessionDB} SessionDB
  */
-export function removeUserInfoSessionDB(): SessionDB {
+export function removeUserInfoSessionDB(): void {
   return removeSession(_USER_INFO_)
 }

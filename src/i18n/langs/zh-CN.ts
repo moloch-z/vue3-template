@@ -1,5 +1,4 @@
 import zhCN from 'ant-design-vue/es/locale/zh_CN'
-console.log('zhCN', zhCN)
 
 export default {
   ...zhCN,
