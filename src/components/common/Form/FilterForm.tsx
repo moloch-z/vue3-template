@@ -10,7 +10,7 @@ import './style/filterForm.less'
  */
 export function filterFormButton(): JSX.Element {
   return (
-    <div className="filter-form-button">
+    <div class="filter-form-button">
       <a-button html-type="reset">{$t('Table.filterReset')}</a-button>
       <a-button html-type="search" type="primary">
         {$t('search')}
