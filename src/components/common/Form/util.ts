@@ -3,6 +3,7 @@ import type { PropType, VNode } from 'vue'
 import type { FormListItem } from './form'
 import { useI18nProps } from './hooks'
 import { getSlot } from '@/utils'
+import { FormInstance } from 'ant-design-vue'
 
 export const _baseFormProps = Object.freeze({
   formList: {
@@ -45,7 +46,7 @@ export function renderSlot(slotName: string, ctx: any): VNode[] | undefined {
  * @returns {JSX.Element | void} vnode
  */
 export function renderComponent(ctx: any, componentData: FormListItem): JSX.Element | void {
-  const { is, componentProps, name } = componentData
+  const { is, componentProps, name, models } = componentData
 
   if (is) {
     const newComponentProps = { ...useI18nProps(componentProps) }
@@ -58,6 +59,17 @@ export function renderComponent(ctx: any, componentData: FormListItem): JSX.Elem
         'onUpdate:value': value => {
           ctx.modelValue[name as string] = value
         }
+      })
+    }
+
+    if (models?.length) {
+      models.forEach(model => {
+        Object.assign(newComponentProps, {
+          [model.name]: ctx.modelValue[model.name],
+          [`onUpdate:${model.onUpdateName}`]: value => {
+            ctx.modelValue[model.onUpdateName] = value
+          }
+        })
       })
     }
 

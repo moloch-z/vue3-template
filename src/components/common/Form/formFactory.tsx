@@ -83,7 +83,7 @@ export function formFactory(options: FormFactoryOptions): Component {
 
       onMounted(() => {
         if (formRef.value) {
-          emit('initFinsh', formRef.value)
+          emit('initFinsh', { ...formRef.value })
         }
       })
       return {
@@ -93,7 +93,7 @@ export function formFactory(options: FormFactoryOptions): Component {
     },
     render(): JSX.Element {
       return (
-        <a-form modelValue={this.modelValue} onReset={this.onReset} ref={this.formRef} {...this.formProps}>
+        <a-form modelValue={this.modelValue} onReset={this.onReset} ref={'formRef'} {...this.formProps}>
           {layoutRender ? layoutRender(this) : baseLayoutRender(this)}
         </a-form>
       )
