@@ -22,7 +22,6 @@
 import { useUserStore } from '@/store'
 
 const userStore = useUserStore()
-console.log(userStore.userInfo)
 
 function handleMenuClick(e) {
   if (e.key === 'logout') {

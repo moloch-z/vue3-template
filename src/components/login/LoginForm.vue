@@ -34,7 +34,7 @@
 </template>
 <script lang="ts" setup>
 import type { LoginFormData } from '@/api'
-import { apiTokenSession } from '@/utils'
+// import { apiTokenSession } from '@/utils'
 import { useUserStore } from '@/store'
 import router from '@/router'
 
@@ -53,10 +53,8 @@ const onFinish = (values: FormData) => {
       router.push('/')
     })
     .catch(_ => {
-      console.log('1111')
-
       // 测试
-      apiTokenSession({ access_token: 'test', expires_in: 10000000 })
+      // apiTokenSession({ access_token: 'test', expires_in: 10000000 })
       router.push('/')
     })
 }

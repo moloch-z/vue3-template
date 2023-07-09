@@ -10,3 +10,4 @@ package-lock.json
 visualizer
 types/auto-imports.d.ts
 types/components.d.ts
+coverage

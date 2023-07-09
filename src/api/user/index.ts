@@ -7,6 +7,8 @@ export interface UserInfo {
   id: number
   userName: string
 }
+
+export const getUserInfoUrl = `${prefix}/userInfo`
 /**
  * 获取用户信息
  *
@@ -14,5 +16,5 @@ export interface UserInfo {
  * @returns {AxiosPromise} TokenData
  */
 export function getAppUserInfo(): AxiosPromise<ServerResponse<UserInfo>> {
-  return request({ url: `${prefix}/userInfo`, method: 'GET' })
+  return request({ url: getUserInfoUrl, method: 'GET' })
 }

@@ -1,4 +1,4 @@
-import { isObject, hasSameKey, hasOwnProperty } from '@/utils/is'
+import { isObject, hasSameKey, hasOwnProperty } from './is'
 
 /**
  *  深度合并对象

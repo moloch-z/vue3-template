@@ -6,6 +6,7 @@ import { userInfoSession, removeUserInfoSessionDB, apiTokenSession } from '@/uti
 export const useUserStore = defineStore('user', {
   state: () => {
     const userInfo = userInfoSession()
+
     return { userInfo, access_token: '' }
   },
   actions: {

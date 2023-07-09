@@ -3,15 +3,17 @@ import request from '../request'
 
 const prefix = '/login'
 
+export const loginUrl = `${prefix}/oauth/token`
+
 export interface TokenResponse {
   access_token: string
   expires_in: number
 }
 
 export interface LoginFormData {
-  username: ''
-  password: ''
-  remember: true
+  username: string
+  password: string
+  remember: boolean
 }
 /**
  * 登录
@@ -21,7 +23,7 @@ export interface LoginFormData {
  */
 export function login(data: FormData): AxiosPromise<ServerResponse<TokenResponse>> {
   return request({
-    url: `${prefix}/oauth/token`,
+    url: loginUrl,
     method: 'POST',
     data,
     headers: {
@@ -30,11 +32,12 @@ export function login(data: FormData): AxiosPromise<ServerResponse<TokenResponse
   })
 }
 
+export const logoutUrl = `${prefix}/logout`
 /**
  * 注销
  *
  * @returns {AxiosPromise} logout res
  */
 export function logout(): AxiosPromise<ServerResponse<null>> {
-  return request({ url: `${prefix}/logout`, method: 'GET' })
+  return request({ url: logoutUrl, method: 'GET' })
 }
