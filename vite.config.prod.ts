@@ -31,7 +31,7 @@ const plugins = [
   {
     ...externalGlobals({
       vue: 'Vue',
-      dayjs: 'dayjs',
+      // dayjs: 'dayjs',
       axios: 'axios',
       'vue-router': 'VueRouter',
       'vue-i18n': 'VueI18n',
@@ -84,10 +84,10 @@ export default defineConfig({
       }
     },
     rollupOptions: {
-      external: ['vue', 'axios', 'ant-design-vue', 'vue-demi', 'pinia', 'vue-i18n', 'three', 'vue-router'],
+      external: ['vue', 'axios', 'vue-demi', 'pinia', 'vue-i18n', 'three', 'vue-router'],
       output: {
         manualChunks: {
-          // 'ant-design-vue': ['ant-design-vue'],
+          'ant-design-vue': ['ant-design-vue'],
           'ant-design_icons-vue': ['@ant-design/icons-vue'],
           'vue-component': ['vue-dompurify-html']
         },

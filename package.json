@@ -9,6 +9,7 @@
     "start": "npm i -g pnpm && pnpm i & pnpm dev",
     "dev": "vite -c ./vite.config.dev.ts --mode development",
     "build": "vite build -c ./vite.config.prod.ts --mode production",
+    "pub": "pnpm pub.sh",
     "report": "vite build -c ./vite.config.prod.ts --mode production",
     "lint:es": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
     "lint:css": "stylelint --cache src/**/*.{css,sass,scss,less} --fix",
